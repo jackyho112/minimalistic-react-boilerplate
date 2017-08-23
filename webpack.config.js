@@ -45,7 +45,7 @@ const config = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader', use: 'css-loader'
-        })  
+        })
       }
     ]
   }
@@ -56,7 +56,10 @@ console.log(process.env.NODE_ENV);
 if (process.env.NODE_ENV === 'production') {
   config.entry = './js/Root.jsx';
   config.devtool = false;
-  config.plugins = [new ExtractTextPlugin('styles.css')];
+  config.plugins = [
+    new webpack.optimize.ModuleConcatenationPlugin(),
+    new ExtractTextPlugin('styles.css')
+  ];
 }
 
 module.exports = config;
