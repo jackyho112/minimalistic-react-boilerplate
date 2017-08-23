@@ -1,1 +1,1 @@
-# VC Labs challenge
+# Minimalistic React boilerplate
