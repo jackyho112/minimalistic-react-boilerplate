@@ -13,7 +13,7 @@ const App = () => (
         component={props => (
           <AsyncRoute
             props={props}
-            loadingPromise={import('./containers/InfiniteListContainer')}
+            loadingPromise={import('./containers/Landing')}
           />
         )}
       />
