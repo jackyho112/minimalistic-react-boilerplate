@@ -8,9 +8,10 @@ const renderApp = () => {
     <BrowserRouter>
       <App />
     </BrowserRouter>,
-    document.getElementById('app')
+    document.getElementById('app'),
   );
 };
+
 renderApp();
 
 if (module.hot) {
