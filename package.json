@@ -3,7 +3,6 @@
     "build": "NODE_ENV=production webpack -p",
     "build:dev": "NODE_ENV=development webpack -d",
     "dev": "webpack-dev-server",
-    "format": "prettier --single-quote --trailing-comma es5 --write '{,!(node_modules|static|vendor)/**/}*.{js,jsx}'",
     "lint": "eslint --fix **/*.{js,jsx} --quiet",
     "watch": "webpack --watch",
     "precommit": "lint-staged"
@@ -11,7 +10,7 @@
   "lint-staged": {
     "linters": {
       "*.{js,jsx}": [
-        "prettier --single-quote --trailing-comma all --write",
+        "prettier --single-quote --write",
         "git add"
       ]
     }
